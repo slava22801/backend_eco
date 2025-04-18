@@ -9,7 +9,9 @@ const app = express()
 app.use( express.json())
 app.use('/user',userRouter)
 app.use('/product', productRouter)
-app.use(cors)
+app.use(cors({
+    origin: "*"
+}))
 
 app.listen(PORT,()=> console.log("server started on post", PORT))
 
