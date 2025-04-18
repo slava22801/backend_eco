@@ -10,7 +10,7 @@ app.use( express.json())
 app.use('/user',userRouter)
 app.use('/product', productRouter)
 app.use(cors({
-    origin: "*"
+    origin: "http://5.129.197.80"
 }))
 
 app.listen(PORT,()=> console.log("server started on post", PORT))
